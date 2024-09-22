@@ -1,0 +1,87 @@
+@import '../../app.scss';
+
+.section7{
+  height: 80vh;
+  width: 100%;
+  background-color: #F7F7F7;
+  .swiper {
+    width: 80%;
+    height: 80%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @include mobile{
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      min-width: 450px;
+      border-radius: 20px;
+      padding: 30px 40px;
+      @include mobile{
+        min-width: 300px;
+        padding: 20px 20px;
+      }
+
+      .top{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        .img-div{
+          height: 65px;
+          width: 65px;
+          overflow: hidden;
+        border-radius: 10px;
+        margin-right: 20px;
+
+          img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .content{
+          text-align: left;
+
+          h3{
+            font-size: 25px;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            margin-bottom: 10;
+          }
+
+          p{
+            color: #F18F02;
+
+            span{
+              font-size: 16px;
+              color: #18C75A;
+              display: inline-block;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+      .bottom{
+        height: 60%;
+        width: 100%;
+
+        p{
+          text-align: left;
+          color: gray;
+          @include mobile{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .swiper-pagination-bullet-active{
+      background: #18C75A;
+    }
+  }
+}

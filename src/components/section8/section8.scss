@@ -1,0 +1,138 @@
+@import '../../app.scss';
+
+.Section8{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  .dark-div{
+    height: 90%;
+    width: 75%;
+    background: #203741;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    padding: 10px;
+    @include tab{
+      width: 60%;
+      height: 80%;
+      padding: unset;
+    }
+    @include mobile{
+      width: 567px;
+      height: 584px;
+    }
+
+    .right{
+      height: 100%;
+      width: 50%;
+      padding: 50px 85px;
+      @include tab{
+        width: 100%;
+        padding: 20px 20px;
+      }
+      .content{
+        h1{
+          color: #fff;
+          font-size: 45px;
+          line-height: 60px;
+          margin-bottom: 10px;
+          @include mobile{
+            font-size: 30px;
+            width: 300px;
+          }
+          
+        }
+        p{
+          color: #fff;
+          margin-bottom: 30px;
+        }
+        .payment-div{
+          background: #17262B;
+          padding: 50px 40px;
+          border-radius: 10px;
+          margin-bottom: 30px;
+          @include mobile{
+            margin-bottom: 5vw;
+          }
+
+          p{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            span{
+              font-weight: bold;
+            }
+          }
+          hr{
+            background: gray;
+            border: none;
+            height: 1px;
+            margin-bottom: 25px;
+          }
+          h4{
+            font-weight: bold;
+            color: #18C75A;
+            font-size: 22px;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        .btn{
+          cursor: pointer;
+          padding: 10px 20px;
+          background: #18C75A;
+          color: #fff;
+          display: inline;
+          border-radius: 2px;
+          transition:  background .3s ease;
+          @include tab{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+          }
+          @include mobile{
+            margin-top: unset;
+            font-size: 12px;
+            padding: 5px;
+          }
+        }
+        .btn:hover{
+          background: #14b250;
+        }
+        h5{
+          margin-top: 30px;
+          color: #fff;
+          font-weight: 300;
+          @include mobile{
+            margin-top: 2vw;
+          }
+        }
+      }
+    }
+  }
+  .img-div{
+    height: 100%;
+    width: 40%;
+    position:absolute;
+    bottom: 37px;
+    right: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    @include tab{
+      display: none;
+    }
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

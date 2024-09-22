@@ -1,0 +1,23 @@
+@import '../../app.scss';
+
+.arrow{
+  height: 20vh;
+  position: relative;
+  overflow: hidden;
+
+  @include mobile{
+    height: 10vh;
+  }
+
+  svg{
+    position: absolute;
+    top: -70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 300px;
+
+    @include mobile{
+      font-size: 150px;
+    }
+  }
+}

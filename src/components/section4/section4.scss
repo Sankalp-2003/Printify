@@ -1,0 +1,74 @@
+@import '../../app.scss';
+
+.section4{
+  height: 80vh;
+  width: 100%;
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container{
+    display: flex;
+
+    .swiper-pagination-bullet-active{
+      background: #18C75A;
+    }
+
+    @include tab{
+      height: 390px;
+      width: 390px;
+      overflow-x: auto;
+    }
+    @include mobile{
+      height: 390px;
+      width: 390px;
+      position: absolute;
+      left: -10%;
+    }
+    .card{
+      height: 360px;
+      width: 360px;
+      margin-right: 20px;
+
+      @include tab{
+        margin-right: 40px;
+        min-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      @include mobile{
+        min-width: 300px;
+        margin-right: unset;
+      }
+      .card-img{
+        height: 156px;
+        width: 156px;
+        margin-bottom: 45px;
+  
+        img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      h3{
+        color: #18C75A;
+        margin-bottom: 6px;
+      }
+      h2{
+        margin-bottom: 15px;
+      }
+      p{
+        color: gray;
+        width: 80%;
+        @include tab{
+          text-align: center;
+        }
+      }
+    }
+  }
+
+ 
+}

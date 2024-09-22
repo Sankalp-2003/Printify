@@ -1,0 +1,159 @@
+@import '../../app.scss';
+
+.section1{
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  padding-top: 70px;
+  overflow: hidden;
+  position: relative;
+  @include mobile{
+    display: block;
+  }
+
+  .left-div{
+    height: 100%;
+    width: 40%;
+    padding-top: 12vw;
+    padding-left: 12vw;
+    @include mobile{
+      height: 60%;
+    }
+
+    @include tab{
+      padding-top: 12vw;
+      padding-left: 50px;
+    }
+    @include mobile{
+      padding-top: 10px;
+    }
+
+    .left-wrapper{
+      width: 400px;
+      @include mobile{
+        width:300px;
+      }
+      h1{
+        width:100%;
+        font-size: 50px;
+        line-height: 70px;
+        letter-spacing: 1px;
+        @include mobile{
+          width: 70%;
+          line-height: unset;
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+      }
+      .paras{
+        margin: 10px 0;
+        font-weight: bold;
+        color: gray;
+
+        @include mobile{
+          width: 70%;
+        }
+  
+        .para{
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          svg{
+            color: #39B75D;
+            font-size: 20px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .btns{
+        margin-top: 40px;
+        width: 85%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        @include mobile{
+          display: block;
+          height: 140px;
+          width: 75%;
+          margin-top: 20px;
+        }
+
+        .btn{
+          padding: 15px 25px;
+          font-weight: bold;
+          border: 1px solid gray;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all .3s ease;
+          @include mobile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .btn1{
+          background: #39B75D;
+          color: #fff;
+          @include mobile{
+            margin-bottom: 10px;
+          }
+        }
+        .btn2{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .btn1:hover{
+          background-color: #62c87f;
+        }
+        .btn2:hover{
+          color: #62c87f;
+        }
+      }
+      .green-para{
+        margin-top: 10px;
+        font-weight: bold;
+        color: #39B75D;
+        @include mobile{
+          width: 70%;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .right-div{
+    width: 60%;
+    background-image: url('https://printify.com/pfh/media/background-IAMAETLT.svg');
+    background-size: cover;
+    position: relative;
+    @include mobile{
+      height: 40%;
+      width: 100%;
+    }
+
+    .right-img{
+     position: absolute;
+     bottom: 20px;
+     right: 200px;
+      height: 500px;
+      width: 500px;
+      
+      @include tab{
+        height: 39vw;
+        width: 39vw;
+      }
+      @include mobile{
+        right: 30px;
+        bottom: 0;
+        height: 220px;
+        width: 220px;
+      }
+
+      img{
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

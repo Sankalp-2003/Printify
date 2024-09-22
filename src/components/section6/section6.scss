@@ -1,0 +1,102 @@
+@import '../../app.scss';
+
+.Section6{
+  height: 100vh;
+  width: 100%;
+
+  .top{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+      height: 145px;
+      width: 90%;
+      background-color: #E2F7E3;
+      background-image: url('https://printify.com/pfh/media/talk-to-sales-N2GDBAGC.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      @include mobile{
+        flex-direction: column;
+      }
+
+      h4{
+        color: #1F6B45;
+        font-size: 25px;
+        width: 400px;
+        @include mobile{
+          width: unset;
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+      .btn{
+        padding: 10px 20px;
+        background-color: #fff;
+        color: gray;
+        font-weight: bold;
+        border-radius: 2px;
+        cursor: pointer;
+        text-wrap: nowrap;
+        transition: color .3s ease;
+      }
+      .btn:hover{
+        color: #1F6B45;
+      }
+    }
+  }
+  .bottom{
+    height: 50%;
+    width: 100%;
+    background-color: #F7F7F7;
+    display: flex;
+    padding-left: 200px;
+    @include tab{
+      padding: unset;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box1{
+      height: 100%;
+      width: 400px;
+      display: flex;
+      align-items: center;
+      @include mobile{
+        width: 300px;
+      }
+
+      h1{
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 60px;
+        @include mobile{
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+    }
+    .box2{
+      height: 100%;
+      width: 400px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      @include mobile{
+        width: 300px;
+      }
+
+      p{
+        width: 90%;
+        color: gray;
+        line-height: 23px;
+      }
+    }
+  }
+}

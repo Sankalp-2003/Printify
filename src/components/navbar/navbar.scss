@@ -1,0 +1,182 @@
+@import '../../app.scss';
+
+.navbar{
+  height: 70px;
+  width: 100%;
+  padding: 0 90px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+
+  @include tab{
+    padding: unset;
+  }
+  @include mobile{
+    width: 100vw;
+  }
+
+  .logo{
+    height: 60px;
+    padding-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    @include tab{
+      padding-left: 20px;
+    }
+  
+    svg{
+      color: #39B75D;
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+      display: none;
+
+      @include tab{
+        display: block;
+      }
+    }
+    img{
+      height: 80%;
+      object-fit: contain;
+    }
+    .img1{
+      height: 100%;
+      display: none;
+
+      @include mobile{
+        display: block;
+      }
+    }
+    .img2{
+
+      @include mobile{
+        display: none;
+      }
+    }
+    
+  }
+
+  .links{
+    height: 100%;
+
+    ul{
+      display: flex;
+      height: 100%;
+      list-style: none;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 30px;
+      color: gray;
+
+      @include tab{
+        display: none;
+      }
+      .dropdown{
+          position: relative;
+          display: flex;
+          align-items: center;
+          
+
+        svg{
+          color: #000;
+          transition: all 0.5s ease;
+        }
+        .dropdown-content{
+          display: none;
+          margin-top: 5px;
+          padding-top: 40px;
+          position: absolute;
+          left: -50%;
+          top: 0;
+          height: 200px;
+          width: 200px;
+          .dropdown-wrapper{
+            display: inline-block;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+          li{
+            margin-bottom: 10px;
+            text-wrap: nowrap;
+          }
+          }
+        }
+      }
+      .dropdown:hover .dropdown-content{
+        display: block;
+      }
+      .dropdown:hover svg{
+        rotate: 180deg;
+      }
+      
+
+
+      li{
+        font-size: 16px;
+        cursor: pointer;
+      }
+      li:hover{
+        color: #39B75D;
+      }
+    }
+  }
+  .btns{
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    color: gray;
+    cursor: pointer;
+
+    .btn{
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      font-weight: bold;
+      text-wrap: nowrap;
+      transition: all .2s ease;
+    }
+    .signup{
+      border: none;
+      background-color: #39B75D;
+      color: #fff;
+
+      
+    }
+    .login:hover{
+      color: #6ABE6E;
+    }
+    .signup:hover{
+      background-color: #6ABE6E;
+    }
+  }
+  .bot-btn{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    position: fixed;
+    left: 30px;
+    bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+      height: 80%;
+      width: 80%;
+
+    }
+  }
+}
